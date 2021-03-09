@@ -11,25 +11,25 @@
 
 
     <script>
-      var template = '<img src="ApexHeader.png">' + 
-      '<h2>We hereby submit specifications and estimates for: all roof sections of home.</h2>'+
-      '<div class="notes"><p>• We supply a clean roll off container and place lumber under the container wheels to prevent damage to the driveway.</p>' +
-      '<p>• We hang tarps to protect your property and strip all layers of roof Shingles.</p>' +
-      '<p>•	Replace all existing bathroom louvers and soil pipe flanges.</p>' +
-      '<p>•	Re-nail your existing sheathing with 8d ring nails. This extra step will ensure that your sheathing does not “pop up” in the future.</p>' +
-      '<p>•	Install <strong>CertainTeed WinterGuard</strong> granular ice & water shield (or equivalent) on all valleys, skylights, and chimney flashing. Massachusetts building code calls for 3 ft. of ice & water shield on horizontal eaves… We double it to 6 ft.!</p>' +
-      '<p>•	Install CertainTeed RoofRunner Synthetic polymer-based Underlayment (25x stronger than felt paper) in all other areas of roof.</p>' +
-      '<p>• Install 8” aluminum Drip-edge/Rake-edge along entire perimeter (choice of white, brown or mill finish).</p>' +
-      '<p>• Install CertainTeed SwiftStart starter shingles around entire perimeter of roof in order to ensure proper edge adherence.</p>' +
-      '<p>•	Install ConsumerReports-recommended CertainTeed Landmark architectural shingles (6 nails per shingle for 130 mph wind warranty).' +
-      '<p>•	Cut 2” opening at all ridges and hand nail CertainTeed ShingleVent ridge vent (a typical upgrade for other roofing companies).</p>' +
-      '<p>•	Install CertainTeed ShadowRidge cap shingles on all ridge and hip locations.</p>' +
-      '<p>•	Clean up and perform a magnetic sweep of property. Remove debris from gutters and downspouts (if existing).</p>' +
-      '<p>• The roll off container will be picked up in a timely manner upon completion of the project and hauled to a recycling facility. The roll off container is for debris generated from the roof project only and no other materials are permitted. All unused material is the property of Apex Roofing & Restoration LLC.</p>';
+      var template = '<img width=950px src="ApexHeader.png">' + 
+      '<p style="font-size:20px;"><span style="font-weight:bold !important;font-style:italic !important;">We hereby submit specifications and estimates for:</span> all roof sections of home.</p>'+
+      '<div>• We supply a clean roll off container and place lumber under the container wheels to prevent damage to the driveway.</div>' +
+      '<div>• We hang tarps to protect your property and strip all layers of roof Shingles.</div>' +
+      '<div>•	Replace all existing bathroom louvers and soil pipe flanges.</div>' +
+      '<div>•	Re-nail your existing sheathing with 8d ring nails. This extra step will ensure that your sheathing does not “pop up” in the future.</div>' +
+      '<div>•	Install <strong>CertainTeed WinterGuard</strong> granular ice & water shield (or equivalent) on all valleys, skylights, and chimney flashing. Massachusetts building code calls for 3 ft. of ice & water shield on horizontal eaves… We double it to 6 ft.!</div>' +
+      '<div>•	Install <strong>CertainTeed RoofRunner</strong> Synthetic polymer-based Underlayment (25x stronger than felt paper) in all other areas of roof.</div>' +
+      '<div>• Install 8” aluminum Drip-edge/Rake-edge along entire perimeter (choice of white, brown or mill finish).</div>' +
+      '<div>• Install <strong>CertainTeed SwiftStart</strong> starter shingles around entire perimeter of roof in order to ensure proper edge adherence.</div>' +
+      '<div>•	Install <strong>ConsumerReports</strong>-recommended CertainTeed Landmark architectural shingles (6 nails per shingle for 130 mph wind warranty).</div>' +
+      '<div>•	Cut 2” opening at all ridges and hand nail <strong>CertainTeed ShingleVent</strong> ridge vent (a typical upgrade for other roofing companies).</div>' +
+      '<div>•	Install CertainTeed ShadowRidge cap shingles on all ridge and hip locations.</div>' +
+      '<div>•	Clean up and perform a magnetic sweep of property. Remove debris from gutters and downspouts (if existing).</div>' +
+      '<div>• The roll off container will be picked up in a timely manner upon completion of the project and hauled to a recycling facility. The roll off container is for debris generated from the roof project only and no other materials are permitted. All unused material is the property of Apex Roofing & Restoration LLC.</div>';
 
 
-      var table = '<table style="text-align:left;">'+'<tr>'+
-                  '<th>Apex Roofing & Restoration LLC agrees to all labor, material and building permit specified above for the sum of:</th>'+
+      var table = '</br><table style="text-align:left;">'+'<tr>'+
+                  '<th>Apex Roofing & Restoration LLC agrees to all labor, material and building permit specified above for the sum of:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>'+
                   '<th>$</th>'+
                   '</tr>'+
                   '<tr>'+
@@ -48,15 +48,29 @@
                   '<td>Even “better” Landmark PRO Max Definition shingles (250 pounds per Square) for an additional $:</td>'+
                   '<td>$</td>'+
                   '</tr>'+'</table>';
-      var notes = '<p>Notes: </p>';
-
-      var template = template + table + notes;
+      var section1 = '<p>***Dust & debris can enter your attic and precautions should be taken by the homeowner to protect their items and although we take all necessary safety measures we do not cover interior cracks or any consequential damages due to the roof project.<p>'+
+        '<p style="font-weight:bold;">Unlike our competitors, we do not offer high pressure time related coupons. Please call or e-mail us with any questions.</p>'+
+        '<p style="font-weight:bold;">Payment is due in full on the day of the project. We accept cash or check. NO MONEY DOWN!</p>';
+      var notes = '<table style="width:950px">'+
+        '<tr><td style="border-bottom: 1px solid black;">&nbsp;</td></tr>'+
+        '<tr><td style="border-bottom: 1px solid black;">&nbsp;</td></tr>'+
+        '<tr><td style="border-bottom: 1px solid black;">&nbsp;</td></tr>'+
+        '<tr><td style="border-bottom: 1px solid black;">&nbsp;</td></tr>'+
+        '<tr><td style="border-bottom: 1px solid black;">&nbsp;</td></tr>'+
+        '<tr><td style="border-bottom: 1px solid black;">&nbsp;</td></tr></table>';
+      var section3 = '<p>Please Note: No interior carpentry work is included on any skylight installation unit unless previously discussed (if applicable).</p>';
+      var section4 = '<div style="text-align: center; font-size: 20px; font-weight:bold; background-color: #ff0000; color: #ffffff;" id="warranty">The project outlined above includes a fully transferable written 25 year Apex Roofing & Restoration workmanship limited warranty along with a lifetime CertainTeed limited warranty.</div>';
+      var section5 = '<p style="text-align:center;"><span style="font-weight:bold; font-size:18px;">Contract Acceptance:</span><span style="font-size:12px"> Upon Signing, this document becomes a binding contract under law. You may cancel this agreement provided you notify Apex Roofing & Restoration in writing at their main office by ordinary mail posted not later than midnight of the third business day following the signing of this agreement.</span></p>';
+      var footer = '<img width=950px src=Footer.png>';
+      var template = template + table + section1 + notes + footer;
 
       tinymce.init({
-        content_css: "styles.css",
+        content_css: "/styles.css",
         selector: '#myTextArea',
         plugins: 'export print',
         toolbar: 'export',
+        forced_root_block : 'div',
+        visual: false,
         setup: function (editor) {
           editor.on('init', function (e) {
             editor.setContent(template);

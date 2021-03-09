@@ -2,14 +2,20 @@
 h1 {
     font-family: 'Roboto', sans-serif;  
 } body { 
-  line-height: 0.6; 
+  line-height: 0.1; 
 } p {
   font-size: 9px;
+  line-height:0.1;
 } table {
   font-size: 8px;
   line-height: 1;
 } h2 {
   font-size: 12px;
-} img {
-  width: 750px;
+} #warranty {
+  font-size: 24px;
+  font-weight: bold;
+} .tinymce-content p {
+  padding: 0;
+  margin: 2px 0;
+  line-height:20%;
 }
