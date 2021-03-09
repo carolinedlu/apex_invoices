@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" id="test">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/2wsgznq7ye0x85deud4s1rut5gfcwe3kslzqobj1tod6lbab/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="html2canvas.js"></script>
+
+
+    <script>
+      var template = '<img src="ApexHeader.png">' + 
+      '<h2>We hereby submit specifications and estimates for: all roof sections of home.</h2>'+
+      '<div class="notes"><p>• We supply a clean roll off container and place lumber under the container wheels to prevent damage to the driveway.</p>' +
+      '<p>• We hang tarps to protect your property and strip all layers of roof Shingles.</p>' +
+      '<p>•	Replace all existing bathroom louvers and soil pipe flanges.</p>' +
+      '<p>•	Re-nail your existing sheathing with 8d ring nails. This extra step will ensure that your sheathing does not “pop up” in the future.</p>' +
+      '<p>•	Install <strong>CertainTeed WinterGuard</strong> granular ice & water shield (or equivalent) on all valleys, skylights, and chimney flashing. Massachusetts building code calls for 3 ft. of ice & water shield on horizontal eaves… We double it to 6 ft.!</p>' +
+      '<p>•	Install CertainTeed RoofRunner Synthetic polymer-based Underlayment (25x stronger than felt paper) in all other areas of roof.</p>' +
+      '<p>• Install 8” aluminum Drip-edge/Rake-edge along entire perimeter (choice of white, brown or mill finish).</p>' +
+      '<p>• Install CertainTeed SwiftStart starter shingles around entire perimeter of roof in order to ensure proper edge adherence.</p>' +
+      '<p>•	Install ConsumerReports-recommended CertainTeed Landmark architectural shingles (6 nails per shingle for 130 mph wind warranty).' +
+      '<p>•	Cut 2” opening at all ridges and hand nail CertainTeed ShingleVent ridge vent (a typical upgrade for other roofing companies).</p>' +
+      '<p>•	Install CertainTeed ShadowRidge cap shingles on all ridge and hip locations.</p>' +
+      '<p>•	Clean up and perform a magnetic sweep of property. Remove debris from gutters and downspouts (if existing).</p>' +
+      '<p>• The roll off container will be picked up in a timely manner upon completion of the project and hauled to a recycling facility. The roll off container is for debris generated from the roof project only and no other materials are permitted. All unused material is the property of Apex Roofing & Restoration LLC.</p>';
+
+
+      var table = '<table style="text-align:left;">'+'<tr>'+
+                  '<th>Apex Roofing & Restoration LLC agrees to all labor, material and building permit specified above for the sum of:</th>'+
+                  '<th>$</th>'+
+                  '</tr>'+
+                  '<tr>'+
+                  '<td><strong>Important items:</strong> Any rotted plywood will be replaced for an additional charge of $2.25 psf for 1/2” plywood:</td>'+
+                  '<td>$</td>'+
+                  '</tr>'+
+                  '<tr>'+
+                  '<td>Any rotted roof boards will be replaced for an additional charge of $6 plf (1x8”):</td>'+
+                  '<td>$</td>'+
+                  '</tr>'+
+                  '<tr>'+
+                  '<td>Cut and install new lead flashing on brick chimneys for an additional charge of $ per chimney:</td>'+
+                  '<td>$</td>'+
+                  '</tr>'+
+                  '<tr>'+
+                  '<td>Even “better” Landmark PRO Max Definition shingles (250 pounds per Square) for an additional $:</td>'+
+                  '<td>$</td>'+
+                  '</tr>'+'</table>';
+      var notes = '<p>Notes: </p>';
+
+      var template = template + table + notes;
+
+      tinymce.init({
+        content_css: "styles.css",
+        selector: '#myTextArea',
+        plugins: 'export print',
+        toolbar: 'export',
+        setup: function (editor) {
+          editor.on('init', function (e) {
+            editor.setContent(template);
+          });
+        }
+      });
+
+    </script>
+
+  </head>
+
+  <body id="test">
+  
+  <h1 style="padding:10px;">Apex Roofing Invoice Generator</h1>
+    <form method="post">
+      <textarea class="tiny-mce" cols="25" rows="75" id="myTextArea"></textarea>
+    </form>
+    <input class="button" type="button" value="Done? Convert to PDF" onclick="convertToPDF()">
+  </body>
+
+
+</html>
